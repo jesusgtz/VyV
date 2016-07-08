@@ -118,7 +118,8 @@ public class Pregunta {
         preguntas.add(new Pregunta("¿De qué otro estándar se apoya el estándar IEEE 829 para describir procesos?",
                 "IEEE 12207", "IEEE 1012", "IEEE 1028"));
 
-        
+        preguntas.add(new Pregunta("¿En qué consiste el estándar IEEE 1012?", "En la especificación de procesos de verificación y validación de software",
+                "En las metodologías para medir la madurez del software", "En los procesos para la recolección efectiva de requerimientos"));
 
         return preguntas;
     }
