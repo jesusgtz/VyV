@@ -19,6 +19,38 @@ public class Pregunta {
         this.wa2 = wa2;
     }
 
+    public String getPregunta() {
+        return pregunta;
+    }
+
+    public void setPregunta(String pregunta) {
+        this.pregunta = pregunta;
+    }
+
+    public String getCa() {
+        return ca;
+    }
+
+    public void setCa(String ca) {
+        this.ca = ca;
+    }
+
+    public String getWa1() {
+        return wa1;
+    }
+
+    public void setWa1(String wa1) {
+        this.wa1 = wa1;
+    }
+
+    public String getWa2() {
+        return wa2;
+    }
+
+    public void setWa2(String wa2) {
+        this.wa2 = wa2;
+    }
+
     public static ArrayList<Pregunta> getPreguntas() {
         ArrayList<Pregunta> preguntas = new ArrayList<Pregunta>();
 
