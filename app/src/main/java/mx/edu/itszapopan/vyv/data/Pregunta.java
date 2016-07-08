@@ -86,6 +86,40 @@ public class Pregunta {
                 "Describir estado de testeo", "Estudiar las especificaciones de diseño de pruebas",
                 "Modificar la especificación de procedimientos de pruebas"));
 
+        preguntas.add(new Pregunta("¿Cuál es el alcance del estándar IEEE 829?", "Aplica a todos los sistemas basados en software",
+                "Aplica para todas las empresas que utilizan software", "Aplica a todos los involucrados en el desarrollo de software"));
+
+        preguntas.add(new Pregunta("Según el estándar IEEE 829, ¿cuáles son todos los componentes del software?",
+                "Entorno, usuarios, hardware, otro software", "Modelo, controladores y vistas", "Backend, frontend y UX"));
+
+        preguntas.add(new Pregunta("¿Cuál es el objetivo del estándar IEEE 829?", "Establecer un marco de trabajo común para los procesos de pruebas",
+                "Establecer las especificaciones de una unidad de pruebas", "Medir el nivel de madurez que tiene un proceso de desarrollo de software"));
+
+        preguntas.add(new Pregunta("Según el estándar IEEE 829, ¿cuál es la descripción del nivel 4 de integridad del software?",
+                "El software debe ejecutarse correctamente o graves consecuencias podrían ocurrir",
+                "El software debe ejecutarse correctamente o el uso previsto no podría ser alcanzado",
+                "El software debe ejecutarse correctamente o una función esperada podría causar consecuencias menores"));
+
+        preguntas.add(new Pregunta("Según el estándar IEEE 829, ¿cuál es la descripción del nivel 3 de integridad del software?",
+                "El software debe ejecutarse correctamente o el uso previsto no podría ser alcanzado",
+                "El software debe ejecutarse correctamente o una función esperada podría causar consecuencias menores",
+                "El software debe ejecutarse correctamente o una función esperada podría causar consecuencias imperceptibles"));
+
+        preguntas.add(new Pregunta("Según el estándar IEEE 829, ¿cuál es la descripción del nivel 2 de integridad del software?",
+                "El software debe ejecutarse correctamente o una función esperada podría causar consecuencias menores",
+                "El software debe ejecutarse correctamente o una función esperada podría causar consecuencias imperceptibles",
+                "El software debe ejecutarse correctamente o graves consecuencias podrían ocurrir"));
+
+        preguntas.add(new Pregunta("Según el estándar IEEE 829, ¿cuál es la descripción del nivel 1 de integridad del software?",
+                "El software debe ejecutarse correctamente o una función esperada podría causar consecuencias imperceptibles",
+                "El software debe ejecutarse correctamente o graves consecuencias podrían ocurrir",
+                "El software debe ejecutarse correctamente o el uso previsto no podría ser alcanzado"));
+
+        preguntas.add(new Pregunta("¿De qué otro estándar se apoya el estándar IEEE 829 para describir procesos?",
+                "IEEE 12207", "IEEE 1012", "IEEE 1028"));
+
+        
+
         return preguntas;
     }
 }
