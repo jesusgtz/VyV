@@ -60,6 +60,7 @@
         android:layout_above="@+id/textView4"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="33dp"
+        android:layout_alignParentLeft="true"
         android:textColor="@android:color/black"
         android:background="@android:color/holo_blue_light"
         android:paddingBottom="5dp"
