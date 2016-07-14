@@ -217,7 +217,63 @@ public class Pregunta {
                 "Cuando se han evaluado las restricciones del sistema",
                 "Cuando el desarrollador lo considera pertinente"));
 
-        preguntas.add(new Pregunta("", "", "", ""));
+        preguntas.add(new Pregunta("¿Cuál es el propósito del estándar IEEE 1028?",
+                "Definir revisiones y auditorías sistemáticas aplicables a la adquisición, suministro, desarrollo, operación y mantenimiento de software",
+                "Definir los niveles de integridad del software",
+                "Definir los procesos de aseguramiento de la calidad de software"));
+
+        preguntas.add(new Pregunta("¿Cuántos tipos de revisión tiene el estándar IEEE 1028?",
+                "5", "3", "4"));
+
+        preguntas.add(new Pregunta("Según el estándar IEEE 1028, ¿cuál es el propósito de las revisiones de la gestión?",
+                "Monitorear el progreso, determinar el estado de los planes y horarios, o evaluar la eficacia de los enfoques de gestión utilizados",
+                "Determinar las utilidades generadas tras el ejercicio de las operaciones del negocio",
+                "Diagnosticar problemáticas que dificulten el buen aprovechamiento de los recursos de la empresa"));
+
+        preguntas.add(new Pregunta("Según el estándar IEEE 1028, ¿cuál es el propósito de las revisiones técnicas?",
+                "Evaluar un producto de software por un equipo de personal calificado para determinar su idoneidad para el uso previsto",
+                "Para evaluar que la unión entre los distintos componentes del sistema es compatible",
+                "Para evaluar las tecnologías que se deben aplicar en el proyecto"));
+
+        preguntas.add(new Pregunta("Según el estándar IEEE 1028, ¿cuál es el propósito de la inspección?",
+                "Detectar e identificar anomalías de productos de software",
+                "Asegurarse de que el producto de software cumple con estándares internacionales",
+                "Comprobar que el modelo de negocios es el adecuado para implementar un producto de software"));
+
+        preguntas.add(new Pregunta("Según el estándar IEEE 1028, ¿cuál de los siguientes es uno de los objetivos principales de un recorrido sistemático?",
+                "Evaluar la usabilidad y la accesibilidad del producto de software",
+                "Recabar datos de anomalías",
+                "Documentar quejas de clientes o usuarios representativos"));
+
+        preguntas.add(new Pregunta("Según el estándar IEEE 1028, ¿cuál es el propósito de una auditoría de software?",
+                "Proporcionar una evaluación de la conformidad con el software, productos y procesos a los reglamentos aplicables, normas, directrices, planes y especificaciones",
+                "Documentar defectos en el software",
+                "Considerar implementaciones alternativas"));
+
+        preguntas.add(new Pregunta("¿Qué define el estándar IEEE 1044?",
+                "Un proceso para clasificar anomalías de software y su documentación al identificarse en cualquier fase del ciclo de vida",
+                "Un modelo de desarrollo orientado a resultados",
+                "Un proceso de automatización de pruebas unitarias"));
+
+        preguntas.add(new Pregunta("¿Quiénes representan la audiencia del estándar IEEE 1044?",
+                "Los desarrolladores, adquirientes, usuarios y evaluadores",
+                "Los directivos de la organización",
+                "Cualquier empresa con calidad en sus procesos"));
+
+        preguntas.add(new Pregunta("¿Cuál es el alcance del estándar IEEE 1044?",
+                "Definir un enfoque unificado para clasificar anomalías encontradas en el software y su documentación",
+                "Solucionar las anomalías encontradas en la fase de planeación",
+                "Establecer estándares de codificación internos para los desarrolladores"));
+
+        preguntas.add(new Pregunta("Según el estándar IEEE 1044, ¿cuáles son los pasos para identificar una anomalía?",
+                "Reconocimiento, investigación, medición y disposición",
+                "Testing, documentación, revisión y corrección",
+                "Depende de la fase en la que se encontró la anomalía"));
+
+        preguntas.add(new Pregunta("Según el estándar IEEE 1044, ¿cuáles son las actividades que se llevan a cabo durante todo el proceso?",
+                "Registrar, clasificar e identificar impacto",
+                "Testear, documentar y corregir",
+                "Depende de la arquitectura que tenga el software"));
 
         return preguntas;
     }
