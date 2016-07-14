@@ -153,6 +153,72 @@ public class Pregunta {
         preguntas.add(new Pregunta("¿En qué consiste el estándar IEEE 1012?", "En la especificación de procesos de verificación y validación de software",
                 "En las metodologías para medir la madurez del software", "En los procesos para la recolección efectiva de requerimientos"));
 
+        preguntas.add(new Pregunta("Según el estándar IEEE 1012, los requerimientos de los procesos del ciclo de vida de la verificación y validación de software son especificados por:",
+                "Diferentes niveles de integridad", "La unión de todos los componentes del sistema",
+                "Es estándar IEEE 830"));
+
+        preguntas.add(new Pregunta("Según el estándar IEEE 1012, ¿qué muestra la valoración objetiva de los productos de software y procesos a lo largo de todo el ciclo de vida?",
+                "Si los requerimientos del software y del sistema son correctos, completos, precisos, consistentes y testeables",
+                "Si la documentación del software y del sistema es suficiente",
+                "Si el equipo de desarrollo cuenta con un modelo de desarrollo de software adecuado"));
+
+        preguntas.add(new Pregunta("Según el estándar IEEE 1012, ¿en qué consiste el feedback?",
+                "En la resolución de anomalías, mejoras de ejecución y mejoras de la calidad no solo para las condiciones de ejecución esperadas",
+                "En una reunión breve de 15 minutos con todos los desarrolladores del proyecto",
+                "En una revisión exhaustiva de los avances realizados hasta el momento"));
+
+        preguntas.add(new Pregunta("¿Cuál de las siguientes opciones es un objetivo del estándar IEEE 1012?",
+                "Identificar las tareas mínimas de Verificación y Validación correspondientes a los cuatro niveles de integridad",
+                "Ayudar a los desarrolladores a entender la importancia de la documentación de software",
+                "Llevar un proceso de pruebas al paralelo del proceso de desarrollo de software"));
+
+        preguntas.add(new Pregunta("¿Cuál es el alcance del estándar IEEE 1012?",
+                "Abarca sistemas basados en software, hardware e interfaces",
+                "Para los testers y los supervisores de los testers",
+                "Para todos los proyectos que apliquen procesos de Aseguramiento de la Calidad"));
+
+        preguntas.add(new Pregunta("Según el estándar IEEE 1012, ¿qué provee la Verificación?",
+                "Evidencia objetiva del software, de sus productos asociados y procesos",
+                "Revisiones documentadas en checklists",
+                "Un enfoque técnico de lo redactado en los requerimientos funcionales"));
+
+        preguntas.add(new Pregunta("Según el estándar IEEE 1012, ¿qué certifica la Validación?",
+                "Que se cumple con el uso esperado y las necesidades del usuario son cubiertas",
+                "Que se completa exitosamente el proceso de desarrollo de software",
+                "Que la implementación del plan de desarrollo fue exitosa"));
+
+        preguntas.add(new Pregunta("Según el estándar IEEE 1012, ¿cuál de los siguientes es uno de los pasos del proceso de administración?",
+                "Preparar el plan para la ejecución de procesos",
+                "Adquirir los recursos físicos necesarios para trabajar",
+                "Separar la totalidad del proyecto en módulos más pequeños y manejables"));
+
+        preguntas.add(new Pregunta("Según el estándar IEEE 1012, ¿cuál de los siguientes es uno de los pasos del proceso de adquisición?",
+                "Definir las necesidades para conseguir un sistema, producto de software o servicio de software",
+                "Checar los procesos de eficiencia y efectividad",
+                "Desarrollar interfaces para integrar las adquisiciones"));
+
+        preguntas.add(new Pregunta("Según el estándar IEEE 1012, ¿cuál de los siguientes es uno de los pasos del proceso de abastecimiento?",
+                "Se inicia con la decisión de preparar una propuesta para responder a la solicitud de un adquiriente",
+                "La ejecución de pruebas de aceptación e instalación",
+                "Instalación y soporte para la aprobación de los productos de software"));
+
+        preguntas.add(new Pregunta("Según el estándar IEEE 1012, ¿qué contiene el proceso de desarrollo?",
+                "Las actividades y tareas pertenecientes al desarrollador",
+                "Los procesos operativos para la adherencia con el uso previsto",
+                "Las actividades de planeación"));
+
+        preguntas.add(new Pregunta("Según el estándar IEEE 1012, ¿cuál de los siguientes es uno de los pasos del proceso de operación?",
+                "Involucrar el uso de sistemas de software para el usuario final dentro de un entorno operacional",
+                "Actuar sobre cada una de las actividades",
+                "Establecer las modificaciones que son necesarias para el buen funcionamiento del sistema"));
+
+        preguntas.add(new Pregunta("Según el estándar IEEE 1012, ¿cuándo se activa el proceso de mantenimiento?",
+                "Cuando el sistema de software y la documentación asociada se deben cambiar en respuesta a una necesidad de mantenimiento del sistema",
+                "Cuando se han evaluado las restricciones del sistema",
+                "Cuando el desarrollador lo considera pertinente"));
+
+        preguntas.add(new Pregunta("", "", "", ""));
+
         return preguntas;
     }
 }
