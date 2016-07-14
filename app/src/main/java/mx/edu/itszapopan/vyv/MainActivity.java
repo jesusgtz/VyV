@@ -1,6 +1,5 @@
 package mx.edu.itszapopan.vyv;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
@@ -10,8 +9,6 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -57,12 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 updateLayout();
                 this.start();
                 i[1]++;
-                if(i[1] == totalPreguntas) {
-                    cdt.cancel();
-                    Intent i = new Intent(MainActivity.this, Resultado.class);
-                    i.putExtra("puntaje", puntaje);
-                    startActivity(i);
-                }
+                validar();
             }
         };
         cdt.start();
@@ -99,12 +91,7 @@ public class MainActivity extends AppCompatActivity {
                         t.setGravity(Gravity.CENTER, 0, 0);
                         t.show();
                         puntaje += valorDeRespuesta;
-                        if(i[1] == totalPreguntas) {
-                            cdt.cancel();
-                            Intent i = new Intent(MainActivity.this, Resultado.class);
-                            i.putExtra("puntaje", puntaje);
-                            startActivity(i);
-                        }
+                        validar();
                     }
                 });
 
@@ -118,12 +105,7 @@ public class MainActivity extends AppCompatActivity {
                         cdt.start();
                         updateLayout();
                         i[1]++;
-                        if(i[1] == totalPreguntas) {
-                            cdt.cancel();
-                            Intent i = new Intent(MainActivity.this, Resultado.class);
-                            i.putExtra("puntaje", puntaje);
-                            startActivity(i);
-                        }
+                        validar();
                     }
                 });
 
@@ -137,12 +119,7 @@ public class MainActivity extends AppCompatActivity {
                         cdt.start();
                         updateLayout();
                         i[1]++;
-                        if(i[1] == totalPreguntas) {
-                            cdt.cancel();
-                            Intent i = new Intent(MainActivity.this, Resultado.class);
-                            i.putExtra("puntaje", puntaje);
-                            startActivity(i);
-                        }
+                        validar();
                     }
                 });
                 break;
@@ -158,12 +135,7 @@ public class MainActivity extends AppCompatActivity {
                         cdt.start();
                         updateLayout();
                         i[1]++;
-                        if(i[1] == totalPreguntas) {
-                            cdt.cancel();
-                            Intent i = new Intent(MainActivity.this, Resultado.class);
-                            i.putExtra("puntaje", puntaje);
-                            startActivity(i);
-                        }
+                        validar();
                     }
                 });
 
@@ -181,12 +153,7 @@ public class MainActivity extends AppCompatActivity {
                         t.setGravity(Gravity.CENTER, 0, 0);
                         t.show();
                         puntaje += valorDeRespuesta;
-                        if(i[1] == totalPreguntas) {
-                            cdt.cancel();
-                            Intent i = new Intent(MainActivity.this, Resultado.class);
-                            i.putExtra("puntaje", puntaje);
-                            startActivity(i);
-                        }
+                        validar();
                     }
                 });
 
@@ -200,12 +167,7 @@ public class MainActivity extends AppCompatActivity {
                         cdt.start();
                         updateLayout();
                         i[1]++;
-                        if(i[1] == totalPreguntas) {
-                            cdt.cancel();
-                            Intent i = new Intent(MainActivity.this, Resultado.class);
-                            i.putExtra("puntaje", puntaje);
-                            startActivity(i);
-                        }
+                        validar();
                     }
                 });
                 break;
@@ -221,12 +183,7 @@ public class MainActivity extends AppCompatActivity {
                         cdt.start();
                         updateLayout();
                         i[1]++;
-                        if(i[1] == totalPreguntas) {
-                            cdt.cancel();
-                            Intent i = new Intent(MainActivity.this, Resultado.class);
-                            i.putExtra("puntaje", puntaje);
-                            startActivity(i);
-                        }
+                        validar();
                     }
                 });
 
@@ -240,12 +197,7 @@ public class MainActivity extends AppCompatActivity {
                         cdt.start();
                         updateLayout();
                         i[1]++;
-                        if(i[1] == totalPreguntas) {
-                            cdt.cancel();
-                            Intent i = new Intent(MainActivity.this, Resultado.class);
-                            i.putExtra("puntaje", puntaje);
-                            startActivity(i);
-                        }
+                        validar();
                     }
                 });
 
@@ -263,15 +215,19 @@ public class MainActivity extends AppCompatActivity {
                         t.setGravity(Gravity.CENTER, 0, 0);
                         t.show();
                         puntaje += valorDeRespuesta;
-                        if(i[1] == totalPreguntas) {
-                            cdt.cancel();
-                            Intent i = new Intent(MainActivity.this, Resultado.class);
-                            i.putExtra("puntaje", puntaje);
-                            startActivity(i);
-                        }
+                        validar();
                     }
                 });
                 break;
+        }
+    }
+
+    private void validar() {
+        if(i[1] == totalPreguntas) {
+            cdt.cancel();
+            Intent i = new Intent(MainActivity.this, Resultado.class);
+            i.putExtra("puntaje", Math.floor(puntaje));
+            startActivity(i);
         }
     }
 }

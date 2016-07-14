@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">VyV</string>
+    <string name="puntajees">Tu puntaje es:</string>
+    <string name="jugarotravez">Jugar Otra Vez</string>
 </resources>
