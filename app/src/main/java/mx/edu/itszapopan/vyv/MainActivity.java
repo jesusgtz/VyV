@@ -230,4 +230,9 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i);
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        // Do Here what ever you want do on back press;
+    }
 }
