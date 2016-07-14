@@ -1,10 +1,15 @@
 package mx.edu.itszapopan.vyv;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -19,23 +24,27 @@ public class MainActivity extends AppCompatActivity {
     CountDownTimer cdt;
     ArrayList<Pregunta> p;
     Random obj;
+    double puntaje = 0;
+    int[] i = {0,0};
+    int totalPreguntas = 15;
+    double valorDeRespuesta = 6.67;
+    int valorProgressBar = 5;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        int rep = 0;
         pb = (ProgressBar) findViewById(R.id.progressBar);
         p = Pregunta.getPreguntas();
-        updateLayout();
 
-        final int[] i = {0,0};
+        updateLayout();
         pb.setProgress(i[0]);
-        cdt = new CountDownTimer(15000, 1000) {
+        cdt = new CountDownTimer(20000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-                i[0] += 7;
+                i[0] += valorProgressBar;
                 pb.setProgress(i[0]);
             }
 
@@ -48,6 +57,12 @@ public class MainActivity extends AppCompatActivity {
                 updateLayout();
                 this.start();
                 i[1]++;
+                if(i[1] == totalPreguntas) {
+                    cdt.cancel();
+                    Intent i = new Intent(MainActivity.this, Resultado.class);
+                    i.putExtra("puntaje", puntaje);
+                    startActivity(i);
+                }
             }
         };
         cdt.start();
@@ -71,20 +86,191 @@ public class MainActivity extends AppCompatActivity {
         switch (ca) {
             case 0:
                 res1.setText(temp.getCa());
+                res1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        cdt.cancel();
+                        i[0] = 0;
+                        pb.setProgress(i[0]);
+                        cdt.start();
+                        updateLayout();
+                        i[1]++;
+                        Toast t = Toast.makeText(MainActivity.this, "¡Correcto!", Toast.LENGTH_SHORT);
+                        t.setGravity(Gravity.CENTER, 0, 0);
+                        t.show();
+                        puntaje += valorDeRespuesta;
+                        if(i[1] == totalPreguntas) {
+                            cdt.cancel();
+                            Intent i = new Intent(MainActivity.this, Resultado.class);
+                            i.putExtra("puntaje", puntaje);
+                            startActivity(i);
+                        }
+                    }
+                });
+
                 res2.setText(temp.getWa1());
+                res2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        cdt.cancel();
+                        i[0] = 0;
+                        pb.setProgress(i[0]);
+                        cdt.start();
+                        updateLayout();
+                        i[1]++;
+                        if(i[1] == totalPreguntas) {
+                            cdt.cancel();
+                            Intent i = new Intent(MainActivity.this, Resultado.class);
+                            i.putExtra("puntaje", puntaje);
+                            startActivity(i);
+                        }
+                    }
+                });
+
                 res3.setText(temp.getWa2());
+                res3.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        cdt.cancel();
+                        i[0] = 0;
+                        pb.setProgress(i[0]);
+                        cdt.start();
+                        updateLayout();
+                        i[1]++;
+                        if(i[1] == totalPreguntas) {
+                            cdt.cancel();
+                            Intent i = new Intent(MainActivity.this, Resultado.class);
+                            i.putExtra("puntaje", puntaje);
+                            startActivity(i);
+                        }
+                    }
+                });
                 break;
 
             case 1:
                 res1.setText(temp.getWa1());
+                res1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        cdt.cancel();
+                        i[0] = 0;
+                        pb.setProgress(i[0]);
+                        cdt.start();
+                        updateLayout();
+                        i[1]++;
+                        if(i[1] == totalPreguntas) {
+                            cdt.cancel();
+                            Intent i = new Intent(MainActivity.this, Resultado.class);
+                            i.putExtra("puntaje", puntaje);
+                            startActivity(i);
+                        }
+                    }
+                });
+
                 res2.setText(temp.getCa());
+                res2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        cdt.cancel();
+                        i[0] = 0;
+                        pb.setProgress(i[0]);
+                        cdt.start();
+                        updateLayout();
+                        i[1]++;
+                        Toast t = Toast.makeText(MainActivity.this, "¡Correcto!", Toast.LENGTH_SHORT);
+                        t.setGravity(Gravity.CENTER, 0, 0);
+                        t.show();
+                        puntaje += valorDeRespuesta;
+                        if(i[1] == totalPreguntas) {
+                            cdt.cancel();
+                            Intent i = new Intent(MainActivity.this, Resultado.class);
+                            i.putExtra("puntaje", puntaje);
+                            startActivity(i);
+                        }
+                    }
+                });
+
                 res3.setText(temp.getWa2());
+                res3.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        cdt.cancel();
+                        i[0] = 0;
+                        pb.setProgress(i[0]);
+                        cdt.start();
+                        updateLayout();
+                        i[1]++;
+                        if(i[1] == totalPreguntas) {
+                            cdt.cancel();
+                            Intent i = new Intent(MainActivity.this, Resultado.class);
+                            i.putExtra("puntaje", puntaje);
+                            startActivity(i);
+                        }
+                    }
+                });
                 break;
 
             case 2:
                 res1.setText(temp.getWa1());
+                res1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        cdt.cancel();
+                        i[0] = 0;
+                        pb.setProgress(i[0]);
+                        cdt.start();
+                        updateLayout();
+                        i[1]++;
+                        if(i[1] == totalPreguntas) {
+                            cdt.cancel();
+                            Intent i = new Intent(MainActivity.this, Resultado.class);
+                            i.putExtra("puntaje", puntaje);
+                            startActivity(i);
+                        }
+                    }
+                });
+
                 res2.setText(temp.getWa2());
+                res2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        cdt.cancel();
+                        i[0] = 0;
+                        pb.setProgress(i[0]);
+                        cdt.start();
+                        updateLayout();
+                        i[1]++;
+                        if(i[1] == totalPreguntas) {
+                            cdt.cancel();
+                            Intent i = new Intent(MainActivity.this, Resultado.class);
+                            i.putExtra("puntaje", puntaje);
+                            startActivity(i);
+                        }
+                    }
+                });
+
                 res3.setText(temp.getCa());
+                res3.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        cdt.cancel();
+                        i[0] = 0;
+                        pb.setProgress(i[0]);
+                        cdt.start();
+                        updateLayout();
+                        i[1]++;
+                        Toast t = Toast.makeText(MainActivity.this, "¡Correcto!", Toast.LENGTH_SHORT);
+                        t.setGravity(Gravity.CENTER, 0, 0);
+                        t.show();
+                        puntaje += valorDeRespuesta;
+                        if(i[1] == totalPreguntas) {
+                            cdt.cancel();
+                            Intent i = new Intent(MainActivity.this, Resultado.class);
+                            i.putExtra("puntaje", puntaje);
+                            startActivity(i);
+                        }
+                    }
+                });
                 break;
         }
     }
